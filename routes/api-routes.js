@@ -104,6 +104,18 @@ app.get("/api/mood_data", function(req, res){
     });
   });
 
+  app.get("/api/dailymoods", function(req, res) {
+    var query = {};
+    if (req.query.user_id) {
+      query.UserId = req.query.user_id;
+    }
+    db.Mood.findAll({
+      where: query,
+      include: [db.User]
+    }).then(function(dbMood) {
+      res.json(dbMood);
+    });
+  });
 
 
       
