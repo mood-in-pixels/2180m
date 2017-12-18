@@ -8,16 +8,6 @@
 "use strict";
 $(function() {
 
-  // if (localStorage.getItem('instructionState') != 'shown'){
-      $('body').chardinJs('start');
-  //     localStorage.setItem('instructionState','shown');
-  // }
-
-  // Stop showing instructions when screen is clicked
-  // $('body').on('click', function() {
-  //   $(this).chardinJs('stop');
-  // });
-  
 var user;
 var user_id;
 
