@@ -1,4 +1,4 @@
-// Requiring our models and passport as we've configured it
+ // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
 
@@ -42,12 +42,29 @@ module.exports = function(app) {
       mood_date: req.body.date,
       DimMoodId: req.body.DimMoodId
     }).then(function() {
-      res.redirect(307, "/api/login");
-    }).catch(function(err) {
-      console.log(err);
-      res.json(err);
+          console.log(dbMood);
+          res.json(dbMood);
+        });
     });
-  });
+
+
+    app.get("/api/dailymoods", function(req, res) {
+    console.log(req.body);
+    db.Mood.findAll({
+      where: {
+      UserId: req.body.user_id,
+      mood_id: req.body.mood_id,
+      color: req.body.color,
+      mood_date: req.body.date,
+      DimMoodId: req.body.DimMoodId
+    }
+    }).then(function(data){
+          res.json(data);
+        }).catch(function(err) {
+        console.log(err);
+        res.json(err);
+      });
+    });
 
 
       app.get("/api/mood_data", function(req, res){

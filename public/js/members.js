@@ -24,7 +24,6 @@ var user_id;
     $.get("/api/mood_data").then(function(data) {
       for (var i = 0; i < data.length; i++) {
 
-
         var newItem = $("<div>")
           newItem.addClass("item")
 
@@ -93,11 +92,24 @@ var user_id;
           DimMoodId: DimMoodId
         };
 
-
                 // When the user clicks a pixel, we run the logDailyMood function to enter mood/color into db
                 logDailyMood(user_id, userData.mood_id, userData.color, userData.mood_date, userData.DimMoodId);
 
               });
+
+              // function logDailyMood(user_id, mood_id, color, date, DimMoodId) {
+              //   $.post("/api/dailymoods", {
+              //     user_id: user_id,
+              //     mood_id: mood_id,
+              //     color: color,
+              //     mood_date: date,
+              //     DimMoodId: DimMoodId
+
+              //   }).then(function(dbMood) {
+              //       console.log(dbMood);
+              //       res.json(dbMood);
+              //     });
+              // };
 
               function logDailyMood(user_id, mood_id, color, date, DimMoodId) {
                 $.post("/api/dailymoods", {
@@ -106,8 +118,7 @@ var user_id;
                   color: color,
                   mood_date: date,
                   DimMoodId: DimMoodId
-
-                }).then(function(data) {
+                }).then(function() {
                   window.location.replace(data);
                   // If there's an error, log the error
                 }).catch(function(err) {
@@ -118,7 +129,18 @@ var user_id;
 
               ////////////////////////////////////////////////////////////////////////////////////
               //////////////         Adding shading on hover for calendar   //////////////////////////
-
+// *
+// *** we need to add a GET route for pulling is all user moods to populate the calendar
+//  // GET route for getting all of the posts
+//   app.get("/api/mood_data/:id", function(req, res) {
+//     db.Mood.findAll({
+//       where: {
+//         userId: this.user_id;
+//       }
+//     }).then(function(dbMood) {
+//       res.json(dbMood);
+//     });
+//   });
 
                $(function(){
                  $('li[class^="cat-"]').mouseover(function(){
