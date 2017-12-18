@@ -104,7 +104,7 @@ app.get("/api/mood_data", function(req, res){
     });
   });
 
-  app.get("/api/dailymoods", function(req, res) {
+  app.get("/api/user_data", function(req, res) {
     var query = {};
     if (req.query.user_id) {
       query.UserId = req.query.user_id;
@@ -116,7 +116,5 @@ app.get("/api/mood_data", function(req, res){
       res.json(dbMood);
     });
   });
-
-
       
 }; // *** END ***
