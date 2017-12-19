@@ -61,6 +61,7 @@ Deployment is through Heroku using JAWs for MySQL data base requirements.
 * [Bootstrap](https://getbootstrap.com/) 
 * [Google Fonts](https://fonts.google.com/) 
 * [Nightmare](http://www.nightmarejs.org/) 
+* [JAWs](https://devcenter.heroku.com/articles/jawsdb) 
 
 
 ## Authors
