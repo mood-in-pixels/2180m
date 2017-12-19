@@ -1,5 +1,6 @@
 # 2180m 
-##Mood in Pixels
+
+### Mood in Pixels
 
 This application will track your daily mood with one click. 
 
