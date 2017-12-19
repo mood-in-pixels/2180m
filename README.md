@@ -12,7 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 You will need
 
 ```
-node.js
+nodejs
 MySQL
 ```
 
@@ -25,6 +25,7 @@ npm install
 ```
 
 to get the modules you need. 
+
 Then create SQL database using 
 
 ```
@@ -33,16 +34,17 @@ schema.sql
 
 ## Running the tests
 
-We used Nightmare and Mocha to create tests. To run the tests enter
+We used Nightmare to create tests. To run the tests enter
 ```
 npm test 
 ```
 on the command line. 
+
 Once running the test will create a new user and log them into the site, creating a screen capture at the moment of on-click event.
 
 ## Deployment
 
-Deployment is through Heroku using JAWs for SQL data base requirements.
+Deployment is through Heroku using JAWs for MySQL data base requirements.
 
 ## Built With
 
@@ -55,10 +57,6 @@ Deployment is through Heroku using JAWs for SQL data base requirements.
 * [Google Fonts](https://fonts.google.com/) 
 * [Nightmare](http://www.nightmarejs.org/) 
 
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
