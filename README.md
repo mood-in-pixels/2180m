@@ -1,7 +1,7 @@
 # 2180 Mood-in-Pixels
 
 This application will track your daily mood with one click. It has been developed to allow users a overview of their weekly, monthly and yearly state of mind.
-Emotional states are represented by colour in this app. Each day users will log the choice that best represents their mood, which is then stored to a server. All entries are available for future review in the form of a personalized, unique spectrum, including both date and location of use.
+Emotional states are represented by colour in this app. Each day users will log the choice that best represents their mood, which is then stored to a database. All entries are available for future review in the form of a personalized, unique spectrum, including both date and location of use.
 
 ## Getting Started
 
